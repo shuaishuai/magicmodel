@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magicmodel"
+version = "0.1.0"
+description = "a magic tools for svc model convertor"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    'numpy==1.24.4',
+    'torch==1.13.1',
+    'scipy==1.8.0',
+    'pysptk==1.0.1',
+    'coremltools==8.1',
+    'scikit-learn==1.6.0',
+]
+
+authors = [
+    { name = "hansen-z", email = "hansenzhang@tencent.com" }
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+license = { text = "MIT" }
+
+[tool.setuptools]
+packages = { find = { where = ["."], include = ["*"], exclude = [] } }
+
+[project.urls]
+Homepage = "https://github.com/shuaishuai/magicmodel.git"
